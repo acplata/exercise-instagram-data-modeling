@@ -15,6 +15,7 @@ class User(Base):
     name = Column(String, nullable=False)
     lastname = Column(String, nullable=False)
     username = Column(String(20), nullable=False)
+    birth_date = Column(String(20), nullable=False)
     email = Column(String(60), nullable=False)
     password = Column(String(20), nullable=False)
 
@@ -27,6 +28,7 @@ class Post(Base):
     id = Column(Integer, primary_key=True)
     title = Column(String(10), nullable=False)
     caption = Column(String(100), nullable=False)
+    image_url = Column(Integer(200), nullable=False)
     created_by_user_id = Column(String(20), nullable=False)
     created_by_user_date = Column(String, nullable=False)
 
